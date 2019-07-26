@@ -52,17 +52,16 @@ namespace OnvixTools
                 {
                     #region MainInfo
                     var filmFullInfo = request.Get($"{Globals.SiteURL}/api/mobile/v1/{filmType}s/{FilmId}.json");
-
                     dynamic film = JObject.Parse(filmFullInfo.ToString());
 
                     Poster.Load(Globals.SiteURL + film[filmType]["poster"]["medium"]);
-                    FilmName.Text = film[filmType]["title_ru"];
                     FilmType.Text = filmType;
-                    #endregion
 
-                    var filmVideo = request.Get($"{Globals.SiteURL}/api/mobile/v1/streaming/{filmType}s/{FilmId}/{VoiceId}".Replace("&", "?"));
-
+                    var filmVideo = request.Get($"{Globals.SiteURL}/api/mobile/v1/streaming/{filmType}s/{FilmId}/{Regex.Replace(VoiceId, "&season", "?season")}");
                     film = JObject.Parse(filmVideo.ToString());
+
+                    FilmName.Text = film["title"];
+                    #endregion
 
                     if (MP4rb.Checked)
                     {
@@ -76,14 +75,10 @@ namespace OnvixTools
                             {
                                 ResultTB.Text = "https:" + film["media_files"]["mp4"];
                             }
+
                             FilmMp4URL = ResultTB.Text;
 
                             #region Create FilmFormats
-
-                            Qu1080.Visible = true;
-                            Qu720.Visible = true;
-                            Qu480.Visible = true;
-                            Qu360.Visible = true;
 
                             JObject filmFormats = JObject.Parse(request.Get(FilmMp4URL).ToString());
 
@@ -95,21 +90,21 @@ namespace OnvixTools
                                 Zepa = (string)filmFormats["360"]
                             };
 
-                            if (FormatMp4.FullHD == null)
+                            if (FormatMp4.FullHD != null)
                             {
-                                Qu1080.Visible = false;
+                                Qu1080.Visible = true;
                             }
-                            if (FormatMp4.HD == null)
+                            if (FormatMp4.HD != null)
                             {
-                                Qu720.Visible = false;
+                                Qu720.Visible = true;
                             }
-                            if (FormatMp4.Normal == null)
+                            if (FormatMp4.Normal != null)
                             {
-                                Qu480.Visible = false;
+                                Qu480.Visible = true;
                             }
-                            if (FormatMp4.Zepa == null)
+                            if (FormatMp4.Zepa != null)
                             {
-                                Qu360.Visible = false;
+                                Qu360.Visible = true;
                             }
                             #endregion
 

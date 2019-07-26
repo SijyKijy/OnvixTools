@@ -39,10 +39,10 @@
             this.HLSrb = new System.Windows.Forms.RadioButton();
             this.MP4rb = new System.Windows.Forms.RadioButton();
             this.ParsePanel = new System.Windows.Forms.Panel();
-            this.Qu360 = new System.Windows.Forms.RadioButton();
-            this.Qu480 = new System.Windows.Forms.RadioButton();
-            this.Qu720 = new System.Windows.Forms.RadioButton();
             this.Qu1080 = new System.Windows.Forms.RadioButton();
+            this.Qu720 = new System.Windows.Forms.RadioButton();
+            this.Qu480 = new System.Windows.Forms.RadioButton();
+            this.Qu360 = new System.Windows.Forms.RadioButton();
             this.ParseMP4b = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Poster)).BeginInit();
             this.ParsePanel.SuspendLayout();
@@ -188,6 +188,45 @@
             this.ParsePanel.TabIndex = 9;
             this.ParsePanel.Visible = false;
             // 
+            // Qu1080
+            // 
+            this.Qu1080.AutoSize = true;
+            this.Qu1080.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Qu1080.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
+            this.Qu1080.Location = new System.Drawing.Point(3, 87);
+            this.Qu1080.Name = "Qu1080";
+            this.Qu1080.Size = new System.Drawing.Size(58, 22);
+            this.Qu1080.TabIndex = 8;
+            this.Qu1080.Text = "1080";
+            this.Qu1080.UseVisualStyleBackColor = true;
+            this.Qu1080.Visible = false;
+            // 
+            // Qu720
+            // 
+            this.Qu720.AutoSize = true;
+            this.Qu720.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Qu720.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
+            this.Qu720.Location = new System.Drawing.Point(3, 59);
+            this.Qu720.Name = "Qu720";
+            this.Qu720.Size = new System.Drawing.Size(50, 22);
+            this.Qu720.TabIndex = 8;
+            this.Qu720.Text = "720";
+            this.Qu720.UseVisualStyleBackColor = true;
+            this.Qu720.Visible = false;
+            // 
+            // Qu480
+            // 
+            this.Qu480.AutoSize = true;
+            this.Qu480.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Qu480.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
+            this.Qu480.Location = new System.Drawing.Point(3, 31);
+            this.Qu480.Name = "Qu480";
+            this.Qu480.Size = new System.Drawing.Size(50, 22);
+            this.Qu480.TabIndex = 8;
+            this.Qu480.Text = "480";
+            this.Qu480.UseVisualStyleBackColor = true;
+            this.Qu480.Visible = false;
+            // 
             // Qu360
             // 
             this.Qu360.AutoSize = true;
@@ -201,42 +240,7 @@
             this.Qu360.TabStop = true;
             this.Qu360.Text = "360";
             this.Qu360.UseVisualStyleBackColor = true;
-            // 
-            // Qu480
-            // 
-            this.Qu480.AutoSize = true;
-            this.Qu480.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Qu480.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
-            this.Qu480.Location = new System.Drawing.Point(3, 31);
-            this.Qu480.Name = "Qu480";
-            this.Qu480.Size = new System.Drawing.Size(50, 22);
-            this.Qu480.TabIndex = 8;
-            this.Qu480.Text = "480";
-            this.Qu480.UseVisualStyleBackColor = true;
-            // 
-            // Qu720
-            // 
-            this.Qu720.AutoSize = true;
-            this.Qu720.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Qu720.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
-            this.Qu720.Location = new System.Drawing.Point(3, 59);
-            this.Qu720.Name = "Qu720";
-            this.Qu720.Size = new System.Drawing.Size(50, 22);
-            this.Qu720.TabIndex = 8;
-            this.Qu720.Text = "720";
-            this.Qu720.UseVisualStyleBackColor = true;
-            // 
-            // Qu1080
-            // 
-            this.Qu1080.AutoSize = true;
-            this.Qu1080.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Qu1080.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(179)))), ((int)(((byte)(132)))));
-            this.Qu1080.Location = new System.Drawing.Point(3, 87);
-            this.Qu1080.Name = "Qu1080";
-            this.Qu1080.Size = new System.Drawing.Size(58, 22);
-            this.Qu1080.TabIndex = 8;
-            this.Qu1080.Text = "1080";
-            this.Qu1080.UseVisualStyleBackColor = true;
+            this.Qu360.Visible = false;
             // 
             // ParseMP4b
             // 
